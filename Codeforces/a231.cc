@@ -5,19 +5,15 @@ using namespace std;
 int main() {
   int n;
   cin >> n;
-
+  
   int s = 0;
-  for (int i = 0; i < n; i++) {
-    int nr = 0;
-    for (int j = 0; j < 3; j++) {
-      int x;
-      cin >> x;
-      nr += x;
-    }
-    if (nr > 1)
-      s++;
+  while (n--) {
+    int a, b, c;
+
+    cin >> a >> b >> c;
+    s += (a + b + c > 1);
   }
 
-  cout << s;
+  cout << s; 
   return 0;
 }
