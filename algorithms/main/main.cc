@@ -1,7 +1,7 @@
 /* main.cc - responsible for calling processes from other files. */
 #include <iostream>
 #include <string>
-#include "console/console.h"
+#include "console/console.hpp"
 using namespace std; 
 
 int main(int argc, const char *argv[]){

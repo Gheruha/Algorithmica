@@ -2,6 +2,10 @@
  * actions. */
 #include <iostream>
 #include <string>
+#include "sorts/sorts.hpp"
 using namespace std;
 
-void selectFunction(string &option) { cout << option; }
+void selectFunction(string &option) {  
+
+hello();
+}
