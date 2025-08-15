@@ -2,6 +2,11 @@
 #ifndef sorts_hpp
 #define sorts_hpp
 
-void hello();
+#include <vector>
+using namespace std;
 
+void sortToExecute(string option);
+void display(vector<int> &vec);
+void mergeSort(vector<int> &vec);
+void merge(vector<int> &leftVec, vector<int> &rightVec, vector<int> &vec);
 #endif /* sorts_hpp */

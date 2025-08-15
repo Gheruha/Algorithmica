@@ -4,6 +4,6 @@
 #include <string>
 using namespace std;
 
-void selectFunction(string &option);
+void selectFunction(string &option1, string &option2);
 
 #endif /* console.h */

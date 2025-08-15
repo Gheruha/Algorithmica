@@ -5,7 +5,7 @@
 #include "sorts/sorts.hpp"
 using namespace std;
 
-void selectFunction(string &option) {  
+void selectFunction(string &option1, string &option2) {  
+  if(option1 == "-sort") sortToExecute(option2); 
 
-hello();
 }
