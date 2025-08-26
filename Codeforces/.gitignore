@@ -1,0 +1,7 @@
+# macOS system file
+.DS_Store
+
+# g++ build outputs
+a.out
+*.o
+
