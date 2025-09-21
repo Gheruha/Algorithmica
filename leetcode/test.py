@@ -1,18 +1,18 @@
 # This file contains my manual 'tests' made for solving leetcode problems.
 # This can help you understand a problem solution much easier.
 
-nums = [1, 1, 1, 2, 2, 3, 4, 5, 5]
-numslen = len(nums)
-previous = nums[0]
-i = 1
+nums = [1, 2, 3, 4]
+target = 7
+pos = 0
 
-while i < numslen:
-    if nums[i] == previous:
-        nums.pop(i)
-        numslen -= 1
+for i in range(len(nums)):
+    if nums[i] > target:
+        pos = i - 1
+        break
+    elif nums[i] == target:
+        pos = i
+        break
     else:
-        previous = nums[i]
-        i += 1
+        pos = i + 1
 
-for i in range(numslen):
-    print(nums[i])
+print(pos)
