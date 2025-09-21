@@ -1,9 +1,5 @@
-# This file contains my manual 'tests' made for solving leetcode problems.
-# This can help you understand a problem solution much easier.
-
-# LINKED LISTS
-
-
+# Linked list implementation.
+# Use this file to understand how to do linked_list operations
 class Node(object):
     def __init__(self, d, n=None):
         self.data = d
@@ -67,3 +63,5 @@ linkedList.add_node(3)
 print(linkedList.find(2))
 linkedList.remove_node(2)
 print(linkedList.find(2))
+
+# This should return 2 & None, because we show this node after adding it & after deleting it
