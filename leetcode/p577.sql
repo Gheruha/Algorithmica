@@ -1,12 +1,9 @@
--- EASY
--- Problem 577: Employee Bonus
+-- VERY EASY
+-- Problem 584: Find Costumer Referee.
 SELECT
-  e.name,
-  b.bonus
+  name
 FROM
-  Employee e
-  LEFT JOIN Bonus b ON e.empId = b.empId
-  OR b.empId IS NULL
+  Customer
 WHERE
-  b.bonus < 1000
-  OR b.bonus IS NULL;
+  referee_id != 2
+  OR referee_id IS NULL
