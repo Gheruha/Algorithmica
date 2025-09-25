@@ -52,27 +52,28 @@ class Solution:
         self, list1: Optional[ListNode], list2: Optional[ListNode]
     ) -> Optional[ListNode]:
 
-        bucket = []
-        while list1:
-            bucket.append(list1.val)
-            list1 = list1.next
+        merged = ListNode()
+        dummy = merged
+        while list1 and list2:
+            if list1.val <= list2.val:
+                merged.next = ListNode(list1.val)
+                list1 = list1.next
+            else:
+                merged.next = ListNode(list2.val)
+                list2 = list2.next
 
-        while list2:
-            bucket.append(list2.val)
-            list2 = list2.next
+            merged = merged.next
 
-        if len(bucket) != 0:
-            bucket.sort()
-            merged = ListNode(bucket[0])
-            dummy = merged
+        if list1:
+            merged.next = list1
+        elif list2:
+            merged.next = list2
 
-            for i in range(1, len(bucket)):
-                merged.next = ListNode(bucket[i])
-                merged = merged.next
-
-            return dummy
-        else:
+        if not dummy:
             return None
+        else:
+            return dummy.next
 
 
 # @leet end
+ @leet end
