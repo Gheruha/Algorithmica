@@ -44,17 +44,16 @@ from typing import *
 class Solution:
     def climbStairs(self, n: int) -> int:
         # Fibonacci
-        previous = 1
-        next = 1
-        steps = 1
+        if n < 2:
+            return n
 
-        while steps <= n:
-            temp = next
-            next = next + previous
-            previous = temp
-            steps += 1
+        prev = 1
+        curr = 2
 
-        return previous
+        for _ in range(3, n + 1):
+            prev, curr = curr, prev + curr
+
+        return curr
 
 
 # @leet end
