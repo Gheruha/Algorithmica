@@ -49,19 +49,13 @@ class ListNode:
 
 class Solution:
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        nums = []
-        dummy = ListNode(0)
-        current = dummy
+        curr = head
+        while curr:
+            while curr.next and curr.val == curr.next.val:
+                curr.next = curr.next.next
+            curr = curr.next
 
-        while head:
-            if head.val not in nums:
-                nums.append(head.val)
-                current.next = ListNode(head.val)
-                current = current.next
-            head = head.next
-
-        return dummy.next
+        return head
 
 
 # @leet end
-
